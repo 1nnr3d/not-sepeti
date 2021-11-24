@@ -1,1 +1,1 @@
-# not-sepeti
+# Example Basic Note Basket App (local storage)
