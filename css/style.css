@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+
+:root{
+    --main-color: rgba(53, 59, 72,1.0);
+    --main-color-light: rgba(53, 59, 72,0.5);
+    --accent-color: rgba(251, 197, 49,1.0);
+    --accent-color-light: rgba(251, 197, 49,0.5);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: tomato;
+    border-radius: 5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main-title{
+    font-size: 2rem;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: white;
+}
+
+.header, .gorev-form{
+    min-height: 20vh;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item{
+    padding: .5rem;
+    font-size: 1.5rem;
+    border:none;
+    background-color: white;
+    outline: none;
+}
+
+.btn-gorev-ekle{
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.btn-gorev-ekle:hover{
+    color: white;
+    background-color: var(--accent-color);
+}
+
+.gorev-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gorev-listesi{
+    list-style: none;
+    width: 70%;
+}
+
+.gorev-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+    border-left: 3px solid black;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.gorev-icerik::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+.gorev-icerik::-webkit-scrollbar-thumb{
+    background-color: tomato;
+    border-radius: 5px;
+}
+
+.gorev-btn{
+    padding: 1.6%;
+    font-size: 100%;
+    border: none;
+    outline:none;
+}
+
+.gorev-icerik{
+    flex: 1;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.gorev-btn-sil{
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+
+.gorev-btn-sil:hover{
+    transition: all 0.5s;
+    color: black;
+    opacity: 0.8;
+}
+.gorev-btn-tamamlandi{
+    background-color: var(--accent-color);
+    cursor: pointer;
+    color: white;
+}
+
+.gorev-btn-tamamlandi:hover{
+    transition: all 0.5s;
+    color: black;
+    opacity: 0.8;
+}
+
+.gorev-tamamlandi .gorev-icerik{
+    text-decoration: line-through white;
+}
+
+.gorev-tamamlandi::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(0, 204, 0);
+    padding: 21.8px;
+    transition: all 0.7s;
+}
+
+.far{
+    pointer-events: none;
+}
